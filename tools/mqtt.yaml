@@ -12,18 +12,44 @@ description:
     pt_BR: MQTT Tools
   llm: MQTT Tools
 parameters:
-  - name: query
+  - name: broker
     type: string
-    required: true
+    required: false
     label:
       en_US: Broker Address
       zh_Hans: Broker地址
       pt_BR: Broker Address
     human_description:
-      en_US: IP address of MQTT broker
-      zh_Hans: MQTT Broker的IP地址
-      pt_BR: IP address of MQTT broker
+      en_US: IP address of MQTT broker, broker.emqx.io by default
+      zh_Hans: MQTT Broker的IP地址,默认为broker.emqx.io
+      pt_BR: IP address of MQTT broker, broker.emqx.io by default
     llm_description: MQTT Broker address
+    form: llm
+  - name: port
+    type: number
+    required: false
+    label:
+      en_US: Broker Port
+      zh_Hans: Broker端口
+      pt_BR: Broker Port
+    human_description:
+      en_US: Port of MQTT broker, 1883 by default
+      zh_Hans: MQTT Broker的目标端口,默认为1883
+      pt_BR: Port of MQTT broker, 1883 by default
+    llm_description: MQTT Broker port
+    form: llm
+  - name: topic
+    type: string
+    required: true
+    label:
+      en_US: MQTT Topic
+      zh_Hans: MQTT topic主题
+      pt_BR: MQTT Topic
+    human_description:
+      en_US: Topic you want to subscribe to
+      zh_Hans: 你想要订阅的主题
+      pt_BR: Topic you want to subscribe to
+    llm_description: MQTT Topic
     form: llm
 extra:
   python:
