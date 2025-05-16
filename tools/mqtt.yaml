@@ -12,9 +12,22 @@ description:
     pt_BR: MQTT Tools
   llm: MQTT Tools
 parameters:
+  - name: type
+    type: string
+    required: true
+    label:
+      en_US: Client type
+      zh_Hans: 客户端类型
+      pt_BR: Client type
+    human_description:
+      en_US: The type of the MQTT client. only pub or sub is allowed
+      zh_Hans: MQTT客户端的类型，只允许pub或者sub
+      pt_BR: The type of the MQTT client. only pub or sub is allowed
+    llm_description: The type of MQTT client
+    form: llm
   - name: broker
     type: string
-    required: false
+    required: true
     label:
       en_US: Broker Address
       zh_Hans: Broker地址
@@ -27,7 +40,9 @@ parameters:
     form: llm
   - name: port
     type: number
-    required: false
+    required: true
+    min: 1
+    min: 65535
     label:
       en_US: Broker Port
       zh_Hans: Broker端口
@@ -50,6 +65,19 @@ parameters:
       zh_Hans: 你想要订阅的主题
       pt_BR: Topic you want to subscribe to
     llm_description: MQTT Topic
+    form: llm
+  - name: payload
+    type: string
+    required: true
+    label:
+      en_US: MQTT Payload
+      zh_Hans: MQTT 消息内容
+      pt_BR: MQTT Payload
+    human_description:
+      en_US: The data you want to send
+      zh_Hans: 你想要发送的数据
+      pt_BR: The data you want to send
+    llm_description: MQTT Payload
     form: llm
 extra:
   python:
