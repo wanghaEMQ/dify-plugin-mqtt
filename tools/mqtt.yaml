@@ -1,0 +1,30 @@
+identity:
+  name: mqtt
+  author: wangha
+  label:
+    en_US: mqtt
+    zh_Hans: mqtt
+    pt_BR: mqtt
+description:
+  human:
+    en_US: MQTT Tools
+    zh_Hans: MQTT Tools
+    pt_BR: MQTT Tools
+  llm: MQTT Tools
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Broker Address
+      zh_Hans: Broker地址
+      pt_BR: Broker Address
+    human_description:
+      en_US: IP address of MQTT broker
+      zh_Hans: MQTT Broker的IP地址
+      pt_BR: IP address of MQTT broker
+    llm_description: MQTT Broker address
+    form: llm
+extra:
+  python:
+    source: tools/mqtt.py
