@@ -41,8 +41,7 @@ parameters:
   - name: port
     type: number
     required: true
-    min: 1
-    min: 65535
+    max: 65535
     label:
       en_US: Broker Port
       zh_Hans: Broker端口
