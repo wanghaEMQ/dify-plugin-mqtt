@@ -18,7 +18,7 @@ class MqttTool(Tool):
         port = tool_parameters["port"]
         topic = tool_parameters["topic"]
         pld = tool_parameters["payload"]
-        print(f"cmd{ctype} b{broker} p{port} t{topic} p{pld}")
+        #print(f"cmd{ctype} b{broker} p{port} t{topic} p{pld}")
 
         res = ""
 
