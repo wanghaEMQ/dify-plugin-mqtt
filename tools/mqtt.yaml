@@ -10,7 +10,7 @@ description:
     en_US: Subscribe messages from or publish messages to a MQTT Broker
     zh_Hans: 向MQTT Broker订阅或者发布消息
     pt_BR: Assinar mensagens de e publicar mensagens no MQTT Broker
-  llm: Subscribe messages from or publish messages to a MQTT Broker. Returns the messages received when subscribe. Returns `ack` when publish is done.
+  llm: Subscribe messages from or publish messages to a MQTT Broker. Returns the messages received when subscribe. Returns `0` when publish is done.
 parameters:
   - name: type
     type: string

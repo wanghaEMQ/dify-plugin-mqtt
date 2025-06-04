@@ -7,7 +7,6 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 import threading
 import queue
 from enum import Enum
-import json
 
 import paho.mqtt.subscribe as subscribe
 import paho.mqtt.publish as publish
@@ -25,11 +24,11 @@ class MqttTool(Tool):
 
         if ctype == "pub":
             publish.single(topic, pld, hostname=broker, port=port, qos=1)
-            res = json.dumps({"res": "done"})
+            res = "0"
         elif ctype == "sub":
             msg = subscribe.simple(topic, hostname=broker, port=port)
-            res = json.dumps({"res": "done", "topic": topic, "payload": str(msg.payload, 'utf-8')})
+            res = str(msg.payload, 'utf-8')
         else:
-            res = json.dumps({"res": "unknown type"})
+            res = "-1" # TODO More errnos
 
         yield self.create_text_message(res)
