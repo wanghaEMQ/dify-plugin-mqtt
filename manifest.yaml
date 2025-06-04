@@ -1,17 +1,17 @@
 version: 0.0.1
 type: plugin
 author: wangha
-name: mqtt
+name: mqtt_tools
 label:
-  en_US: mqtt
-  ja_JP: mqtt
-  zh_Hans: mqtt
-  pt_BR: mqtt
-description:
   en_US: MQTT Tools
-  ja_JP: MQTT Tools
-  zh_Hans: MQTT Tools
-  pt_BR: MQTT Tools
+  ja_JP: MQTTツール
+  zh_Hans: MQTT工具
+  pt_BR: Ferramentas MQTT
+description:
+  en_US: Communicate with MQTT Broker
+  ja_JP: MQTTブローカーとの通信
+  zh_Hans: 与MQTT Broker通信
+  pt_BR: Comunique-se com o MQTT Broker
 icon: icon.svg
 resource:
   memory: 268435456
