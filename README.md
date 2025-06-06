@@ -35,3 +35,12 @@ If the `type` is sub. This node will wait for a message from `topic` from the br
 If the `type` is pub. This node will publish a message to `topic` of broker`broker:port`. This node will end when the message was sent.
 
 If the broker`broker:port` is unavailable. This node will end when timeout and return a error.
+
+### Example
+
+Here is a DSL example to use MQTT-Tools.
+
+https://gist.github.com/wanghaEMQ/e97b009db6363d4689b2d5a6dcf3d9f5
+
+You could also try to run this example online. click [here](https://udify.app/workflow/hNbYDStdQS3ajmNL)
+
